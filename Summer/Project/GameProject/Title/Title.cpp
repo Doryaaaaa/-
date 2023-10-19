@@ -23,7 +23,15 @@ void Title::Update()
     }
 }
 
+char textdate[][512] = {
+    "1コメント",
+    "2コメント",
+    "3コメント",
+};
+
 void Title::Draw()
 {
     m_img.Draw();
+    int index = 0;
+    m_title_text.Draw(0,64,1, 1, 1, textdate[index]);
 }
